@@ -12,7 +12,7 @@ using System.IO;
 
 public class Journal
 {
-    public List<Entry> _entries = new List<Entry>(); 
+    public List<Entry> _entries = new List<Entry>(); // property where all journal entries are stored
     public Journal()
     {
     }
@@ -21,7 +21,7 @@ public class Journal
     // Displays to console all journal entries
     {
         Console.WriteLine();
-        if (_entries.Count == 0)
+        if (_entries.Count == 0) // Gets triggered if no journal entries exist
         {
             Console.WriteLine("There are no journal entries to display");
         }
@@ -49,6 +49,7 @@ public class Journal
     }
 
     public void SaveToFile(string fileName)
+    // Saves journal entries to a text file with given file name
     {
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
@@ -60,6 +61,7 @@ public class Journal
     }
 
     public void ReadFromFile(string fileName)
+    // Loads journal entries from text file with given file name
     {
         _entries.Clear(); //starts with a fresh list of entries
         string[] lines = System.IO.File.ReadAllLines(fileName);

@@ -20,6 +20,7 @@ public class Entry
     }
 
     public void DisplayOnScreen()
+    // Displays one journal entry to the console
     {
         Console.WriteLine($"Date: {_date} - Prompt: {_prompt}");
         Console.WriteLine($"{_content}");
@@ -27,6 +28,7 @@ public class Entry
     }
 
     public string StringForFile()
+    // Returns string formatted to be added to a saved file
     {
         return String.Format($"{_date}|{_prompt}|{_content}");
     }
