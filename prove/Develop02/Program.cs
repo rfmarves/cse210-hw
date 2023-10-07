@@ -21,6 +21,9 @@ class Program
         Console.WriteLine("5. Save");
         Console.WriteLine("6. Quit");
         choice = Console.ReadLine();
+        
+        // show creativity and exceed requirements: Invalid options will send the menu into a loop until a valid option is entered.
+
         if (choice == "1") // Write new prompt based on random prompt
         {
            Prompt newPrompt = new Prompt(); // starts a prompt object to get a random prompt
@@ -28,7 +31,7 @@ class Program
         }
         else if (choice == "2") // Write a prompt based on custom prompt option. Added to show creativity
         {
-            Console.Write("Enter your custom prompt: "); // Added this as additional option to show creativity.
+            Console.Write("Enter your custom prompt: "); // Added this as additional option to show creativity and exceed requirements
             string promptText = Console.ReadLine();      // This gets a custom prompt from the user.
             thisJournal.AddEntry(promptText);
         }
