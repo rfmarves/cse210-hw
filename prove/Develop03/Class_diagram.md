@@ -37,11 +37,11 @@ class Reference {
  - _firstVerse : int
  - _lastVerse : int
  - _scriptureText : list~string~
- + Reference(book, chapter, firstVerse,\nlastVerse, scriptureText) void
  + GetReferenceText() string
  + GetScriptureText() string
  + SetReference(string) void
  + SetText(string) void
+ + Reference(book, chapter, firstVerse,\nlastVerse, scriptureText) void
 }
 
  MainProgram ..> Scripture : Main Program contains uses the Scripture\nobject to function. It will start\nwith the data in the list of Reference\nobjects, take one to create a Scripture object.\nThen it uses that object to do all its functions.\n\n  
