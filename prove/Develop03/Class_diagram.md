@@ -16,25 +16,28 @@ class MainProgram{
 class Scripture {
  - _wordsInScripture : list~Word~
  - _Reference : Reference
+ + Scripture(reference) void
  + HideWords() void
  + GetRenderedText() string
  + IsCompletelyHidden() boolean
- + SetWords(string) : void
- + SetReference(Reference) : void
 }
 class Word {
  - _wordText : string
  - _isHidden : boolean
+ + Word(wordText, isHidden=False) void
  + Hide() void
  + Show() void
  + IsHidden() boolean
  + GetRenderedText() string
- + SetWordText(string) void
 }
 
 class Reference {
- - _scriptureReference : string
- - _scriptureText : string
+ - _book : string
+ - _chapter : int
+ - _firstVerse : int
+ - _lastVerse : int
+ - _scriptureText : list~string~
+ + Reference(book, chapter, firstVerse,\nlastVerse, scriptureText) void
  + GetReferenceText() string
  + GetScriptureText() string
  + SetReference(string) void
