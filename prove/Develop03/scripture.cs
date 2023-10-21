@@ -80,4 +80,12 @@ public class Scripture
         }
     }
 
+    public void UnhideAll()
+    {
+        foreach (var word in _wordsInScripture)
+        {
+            word.Show();
+        }
+    }
+
 }
