@@ -1,5 +1,12 @@
 using System;
 
+// Program exceeds requirements.
+// It takes a list of scripture mastery scriptures from scriptures.txt
+// which currently contains all 25 Old Testament scripture mastery scriptures
+// and loads them all into program as reference objects.
+// It also loops memorizing scriptures until user decides to exit the program.
+// Program will continue with another scripture until user types 'quit'.
+
 class Program
 {
     static void Main(string[] args)
