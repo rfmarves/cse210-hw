@@ -3,13 +3,7 @@
 ## Class Diagram
 
 ```mermaid
-classDiagram 
-direction TB
-class MainProgram{
- - _menuSelection : string
- + RunMenu()
-}
-
+classDiagram
 class Activity {
  # _activityName : string
  # _activityDescription : string
@@ -61,9 +55,16 @@ class ListeningActivity {
  + RunActivity() : void
 }
 
-MainProgram -- Activity
 Activity <|-- BreathingActivity
 Activity <|-- ReflectingActivity
 Activity <|-- ListeningActivity
 
+class MainProgram{
+ - _menuSelection : string
+ + RunMenu()
+}
+
+BreathingActivity -- MainProgram : Menu calls activity method\nto execute a function
+ReflectingActivity -- MainProgram : Menu calls activity method\nto execute a function
+ListeningActivity -- MainProgram : Menu calls activity method\nto execute a function
 ```
