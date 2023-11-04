@@ -1,3 +1,5 @@
+using System.Threading.Channels;
+
 class Activity
 {
     protected string _activityName = "";
@@ -8,22 +10,7 @@ class Activity
 
     public Activity()
     {
-        // nothing to return
-    }
-
-    public void SetName(string name)
-    {
-        _activityName = name;
-    }
-
-    public void SetDescription(string description)
-    {
-        _activityDescription = description;
-    }
-
-    public void SetDuration(int duration)
-    {
-        _duration = duration;
+       // Nothing needed here
     }
 
     public void DisplayStartingMessage()
@@ -35,43 +22,59 @@ class Activity
         _duration = GetInt(_durationPrompt);
     }
 
-    public string GetEndingMessage()
-    {
-        return _endMessage;
-    }
-
-    public void DisplayEndingMessage()
+    public void DisplayEndingMessage(int spinnerDuration = 5)
     {
         Console.WriteLine("Well done!!");
-        SpinnerPause();
+        SpinnerPause(spinnerDuration);
         Console.WriteLine($"\nYou have completed another {_duration} seconds of {_activityName}.");
-        SpinnerPause();
+        SpinnerPause(spinnerDuration);
     }
 
-    public void SpinnerPause(int spinnerDuration = 5)
+    public static void SpinnerPause(int spinnerDuration = 5)
     {
         List<string> charSequence = new List<string> { "-", "\\", "|", "/"};
-        int runs = 0;
         int charPause = 500;
-        while (runs*charPause < spinnerDuration*1000)
+        for ( int runs = 0; runs*charPause < spinnerDuration*1000; runs++)
         {
             Console.Write(charSequence[runs % 4]);
             Thread.Sleep(charPause);
-            runs ++;
             Console.Write("\b \b");
         }
     }
 
-    public void CountdownTimer(int countdownDuration = 6)
+    public static void CountdownTimer(int countdownDuration = 6)
     {
-        while (countdownDuration > 0)
+        for (int i = countdownDuration; i > 0; i--)
         {
-            Console.Write(countdownDuration);
+            Console.Write(i);
             Thread.Sleep(1000);
-            countdownDuration --;
-            Console.Write("\b \b");
+            if        (i < 10) {Console.Write("\b \b");}
+            else if  (i < 100) {Console.Write("\b\b  \b\b");}
+            else if (i < 1000) {Console.Write("\b\b\b   \b\b\b");}
         }
     }
+
+    public static void BarTimer(int type = 0, int countdownDuration = 10, int bars = 20)
+    {
+        // Type 0 is grow an shrink 
+        // Type 1 is grow
+        // Type 2 is shrink
+        char barChar = Convert.ToChar("░");
+        int denominator = bars;
+        if (type == 0) {denominator=bars*2-1;}
+        int sleepPause = (int)Math.Round(countdownDuration * 1000 / ((double)denominator));
+        for (int i = 0; i < bars; i++)
+        {            
+            Console.Write(barChar);
+            if (type == 0 || type == 1) {Thread.Sleep(sleepPause); }
+        }
+        for (int i = 0; i < bars; i++)
+        {
+            Console.Write("\b \b");
+            if (type == 0 || type == 2) {Thread.Sleep(sleepPause);}
+        }
+    }
+
     public static int GetInt(string message)
     {
         bool inputSuccess = false;
@@ -84,5 +87,13 @@ class Activity
             if (!inputSuccess) {Console.WriteLine("Please enter valid number.");}
         }
         return returnValue;
+    }
+
+    public static void GetReady(int spinnerDuration = 5)
+    {
+        Console.Clear();
+        Console.WriteLine("Get ready...");
+        SpinnerPause(spinnerDuration);
+        Console.WriteLine();
     }
 }
