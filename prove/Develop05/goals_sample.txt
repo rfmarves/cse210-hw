@@ -1,0 +1,5 @@
+1755
+EternalGoal:Read the Scriptures|read the scriptures every day|50|2|False
+ChecklistGoal:Do this week's homework|finish an assignment|150|5|True|5|900
+SimpleGoal:Do homework|Finish my weekly assignment|5|1|True
+SimpleGoal:Go to bed early|Go to sleep before 10 today|100|0|False

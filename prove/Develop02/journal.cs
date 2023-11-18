@@ -44,7 +44,7 @@ public class Journal
         newEntry._prompt = promptText;
         Console.WriteLine($"Prompt: {newEntry._prompt}"); // Displays the writing prompt
         Console.WriteLine("Type your entry:");
-        newEntry._content = Console.ReadLine(); // collects the journal entrie
+        newEntry._content = Console.ReadLine(); // collects the journal entry
         _entries.Add(newEntry); // Adds the journal entry to the journal object
     }
 
