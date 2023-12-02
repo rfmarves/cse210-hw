@@ -1,0 +1,10 @@
+C049|Gülnar Clark|1491 Jast Knolls|Port Irvingbury|Iowa|USA
+C002|Agathinus Ace|4130 Wolff Point|North Kacey|South Carolina|United States
+C041|Eldad Brent|6654 Frami Centers|West Denis|Georgia|United States of America
+C010|Yedidya Lionel|0974 Huel Islands|Runolfsdottirview|Tennessee|United States
+C012|Abu Bakr Adhara|55288 Rosalee Lane|Alessandraville|Alaska|United States
+C084|Neptunus Melanie|227 Avenue Laffitte|La Seyne-sur-Mer|Poitou-Charentes|France
+C090|Mirka Raffaele|65 Boulevard de la Victoire|Grenoble|Nord-Pas-de-Calais|France
+C079|Eluf Salome|609 Boulevard de Richelieu|Saint-Quentin|Picardie|France
+C079|Iancu Aelius|0 Impasse des Grands Augustins|Nîmes|Auvergne|France
+C037|Sladjana Luitgard|42 Avenue de la Chaussée-d'Antin|Calais|Champagne-Ardenne|France

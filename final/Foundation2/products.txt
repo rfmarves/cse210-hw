@@ -1,0 +1,21 @@
+P17761|Prusa Mini|500
+P56507|Prusa MK4|1100
+P24231|Prusa MK3+|950
+P45648|PLA filament, 1kg Galaxy Black|35
+P57288|PLA filament, 1kg Jet Black|35
+P10707|PLA filament, 1kg Vanilla White|35
+P86681|PLA filament, 1kg Red|35
+P92401|PLA filament, 1kg Grey|35
+P52788|PLA filament, 1kg Blue|35
+P50977|PLA filament, 1kg Pink|35
+P20009|PLA filament, 1kg Yellow|35
+P45600|PLA filament, 1kg Pure White|35
+P86572|PETG filament, 1kg Galaxy Black|37
+P53274|PETG filament, 1kg Jet Black|37
+P18873|PETG filament, 1kg Vanilla White|37
+P36088|PETG filament, 1kg Red|37
+P48050|PETG filament, 1kg Grey|37
+P83787|PETG filament, 1kg Blue|37
+P76037|PETG filament, 1kg Pink|37
+P75383|PETG filament, 1kg Yellow|37
+P23264|PETG filament, 1kg Pure White|37
