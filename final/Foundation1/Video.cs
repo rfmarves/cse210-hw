@@ -59,6 +59,7 @@ class Video
         Console.WriteLine( "\n*********** Video Information ***********");
         Console.WriteLine($"Title: {_title}");
         Console.WriteLine($"by {_author}, Length: {_length} seconds.\n");
+        Console.WriteLine($"There are {GetNumberOfComments()} comments in video.")
         Console.WriteLine("========= Comments ==========");
         foreach (Comment c in _comments)
         {
