@@ -22,7 +22,7 @@ class Program
         {
             string line = sr.ReadLine();
             string[] parts = line.Split("|");
-            // Creates a base order based on the custoer id in file and master customer list
+            // Creates a base order based on the customer id in file and master customer list
             Order newOrder = new Order(masterCustomers.CustomerByID(parts[0]));
             // iterate over the other items in the list, adding products with quantities
             for (int i = 1; i < parts.Length; i++)
