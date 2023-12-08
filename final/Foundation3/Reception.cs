@@ -1,6 +1,7 @@
 class Reception : Event
 {
     private string _confirmationDetails;
+    private const string _eventType = "Reception";
 
     public Reception(string title, string description, DateOnly date, TimeOnly time, string address, string confirmationDetails) : base(title, description, date, time, address)
     {
@@ -21,12 +22,12 @@ class Reception : Event
     public override void DisplayFull()
     {
         Console.WriteLine(StandardText());
-        Console.WriteLine( "Event Type : Reception");
+        Console.WriteLine($"Event Type : {_eventType}");
         Console.WriteLine($"RSVP here  : {_confirmationDetails}");
     }
 
     public override void DisplayShort()
     {
-        Console.WriteLine($"Reception: {ShortText()}");
+        Console.WriteLine($"{_eventType}: {ShortText()}");
     }
 }

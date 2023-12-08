@@ -12,10 +12,22 @@ class ActivityList
         {
             line = sr.ReadLine();
             string[] parts = line.Split(":", 2);
-            if (parts[0]=="Running") {_activities.Add(new Running(parts[1]));}
-            else if (parts[0]=="Stationary Bicycle") {_activities.Add(new StationaryBicycle(parts[1]));}
-            else if (parts[0]=="Swimming") {_activities.Add(new Swimming(parts[1]));}
-            else  {_activities.Add(new Activity("Activity",parts[1]));}
+            if (parts[0]=="Running")
+            {
+                _activities.Add(new Running(parts[1]));
+            }
+            else if (parts[0]=="Stationary Bicycle")
+            {
+                _activities.Add(new StationaryBicycle(parts[1]));
+            }
+            else if (parts[0]=="Swimming")
+            {
+                _activities.Add(new Swimming(parts[1]));
+            }
+            else
+            {
+                _activities.Add(new Activity("Activity",parts[1]));
+            }
         }
     }
     public void SaveToFile(string fileName)
@@ -33,10 +45,6 @@ class ActivityList
         {
             Console.WriteLine($"{(i+1).ToString().PadLeft(3)}. {_activities[i].GetSummary()}");
         }
-        // foreach (Activity a in _activities)
-        // {
-        //     Console.WriteLine(a.GetSummary());
-        // }
     }
 
     public void Add(Activity activity)

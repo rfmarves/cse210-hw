@@ -1,10 +1,11 @@
 class Swimming : Activity
 {
     private int _numberOfLaps = 0;
+    private const string _activityName = "Swimming";
 
-    public Swimming() : base("Swimming") {}
+    public Swimming() : base(_activityName) {}
 
-    public Swimming(string serializedData) : base("Swimming", serializedData)
+    public Swimming(string serializedData) : base(_activityName, serializedData)
     {
         string[] parameters = serializedData.Split("|");
         _numberOfLaps = int.Parse(parameters[2]);

@@ -1,10 +1,11 @@
 class Running : Activity
 {
     private float _distance = 0;
+    private const string _activityName ="Running";
 
-    public Running() : base("Running") {}
+    public Running() : base(_activityName) {}
 
-    public Running(string serializedData) : base("Running", serializedData)
+    public Running(string serializedData) : base(_activityName, serializedData)
     {
         string[] parameters = serializedData.Split("|");
         _distance = float.Parse(parameters[2]);

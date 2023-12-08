@@ -1,10 +1,11 @@
 class StationaryBicycle : Activity
 {
     private float _speed = 0;
+    private const string _activityName = "Stationary Bicycle";
 
-    public StationaryBicycle() : base("Stationary Bicycle") {}
+    public StationaryBicycle() : base(_activityName) {}
 
-    public StationaryBicycle(string serializedData) : base("Stationary Bicycle",serializedData)
+    public StationaryBicycle(string serializedData) : base(_activityName,serializedData)
     {
         string[] parameters = serializedData.Split("|");
         _speed = float.Parse(parameters[2]);
